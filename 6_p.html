@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="0_style.css">
+
+</head>
+<body>
+  <p>This is 5px html text.It's very tiny.</p>
+  <svg id="svg" viewbox="0 0 100 100"><!-- viewbox="min-x min-y width height -->
+    <text x="10"  y="10">This is 5px html text.It's very tiny</text>
+  </svg>
+ 
+  <script>
+    window.onload = function(){
+      // alert(svg)
+       let svg = document.getElementById('svg');
+       let linestr = "";
+       let svgWidth = 1000;
+       let svgHeight = 800;
+       for(let i =0; i < 100; i++){
+         let interval = i*50;
+         linestr +=`
+         <line x1="0" y1="${interval}" x2="${svgWidth}"  y2="${interval}" stroke="#ccc"/> 
+         <text x="0" y="${interval}" style="font:10px Tahoma;">${interval}</text>
+         <line x1="${interval}" y1="0" x2="${interval}"  y2="${svgHeight}" stroke="#ccc"/>
+         <text x="${interval}" y="10" style="font:10px Tahoma;">${interval}</text>
+
+         `;
+       }
+      //  svg.innerHTML = linestr;//svg的id可以不用get
+    }
+  </script>
+  
+</body>
+</html>
