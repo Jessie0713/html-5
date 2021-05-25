@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <svg width="1000" height="1000" style="border: 1px solid #ccc">
+    <rect x="100" y="100" width="250" height="200" fill="lightblue" stroke = "darkblue" stroke-width="5" rx="10" ry="10"/><!-- 預設黑色，stroke:描邊，rx(roundx)圓角 -->
+    <rect x="150" y="150" width="250" height="200" style="fill:lightcoral;stroke:black; stroke-width: 5"/>
+    <!-- SML 家族後面/算結束，style當css屬性給顏色邊框，不可寫單位-->
+    <circle cx="600" cy="200" r="100" fill="yellow" opacity="0.5"/>
+    <circle cx="750" cy="200" r="100" fill="green" opacity="0.5"/>
+    <g opacity="0.5"><!-- group刷淡有差-->
+      <circle cx="600" cy="600" r="100" fill="yellow" opacity="0.5"/>
+      <circle cx="750" cy="600" r="100" fill="green" opacity="0.5"/>
+    </g>
+    <ellipse cx="250" cy="500" rx="200" ry="100" style="fill: none; stroke:dodgerblue; stroke-width:5;"/>
+   
+    
+  </svg>
+</body>
+</html>
