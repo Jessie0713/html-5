@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="0_style.css">
+</head>
+<body>
+  <svg id="svg"></svg>
+ <!-- <line x1="0" y1="50" x2="900" y2="50" stroke="rgb(0, 0, 0, 0.5)"stroke-width=""/>
+ <line x1="0" y1="100" x2="900" y2="100" stroke="rgb(0, 0, 0, 0.5)"stroke-width=""/> -->
+  
+  <script>
+    window.onload = function(){
+      // alert(svg)
+       let svg = document.getElementById('svg');
+       let linestr = "";
+       let svgWidth = 1000;
+       let svgHeight = 800;
+       for(let i =0; i < 100; i++){
+         let interval = i*50;
+         linestr +=`
+         <line x1="0" y1="${interval}" x2="${svgWidth}"  y2="${interval}" stroke="#ccc"/> 
+         <line x1="${interval}" y1="0" x2="${interval}"  y2="${svgHeight}" stroke="#ccc"/>
+
+         `;
+       }
+       svg.innerHTML = linestr;//svg的id可以不用get
+    }
+  </script>
+  
+</body>
+</html>
